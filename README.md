@@ -52,6 +52,7 @@ CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file
 
 ## Influence Computation
 ### Cache Gradients
+- Length bias
 ```bash
 CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \
 --model_path "logs/Llama-3-8B_length" \
@@ -62,6 +63,20 @@ CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \
 CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \
 --model_path "logs/Llama-3-8B_length" \
 --data_path "dataset/length_dataset/test" \
+--save_name "rapid_grad_val.pt" \
+--seed 42
+```
+- Sycophancy bias
+```bash
+CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \
+--model_path "logs/Llama-3-8B_sycophancy" \
+--data_path "dataset/sycophancy_dataset/train" \
+--save_name "rapid_grad_train.pt" \
+--seed 42
+
+CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \
+--model_path "logs/Llama-3-8B_sycophancy" \
+--data_path "dataset/sycophancy_dataset/test" \
 --save_name "rapid_grad_val.pt" \
 --seed 42
 ```

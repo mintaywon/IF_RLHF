@@ -163,6 +163,7 @@ cython_debug/
 dataset/
 wandb/
 logs/
+legacy/
 
 # Added for IF_RLHF
 *.sh
