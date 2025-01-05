@@ -166,4 +166,3 @@ logs/
 
 # Added for IF_RLHF
 *.sh
-*.yaml

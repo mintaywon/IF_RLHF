@@ -42,12 +42,12 @@ python src/reward_modeling/make_dataset.py
 ### Reward Modeling using length biased dataset
 example script for training reward model (based on LLama3-8B) on length biased dataset
 ```bash
-CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero2.yaml --num_processes=1 --main_process_port=1231 src/reward_modeling/reward_modeling.py recipes/reward_modeling/llama3/Llama-3-8B_length.yaml
+CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero2.yaml --num_processes=1 --main_process_port=1231 src/reward_modeling/reward_modeling.py recipes/reward_modeling/Llama-3-8B_length.yaml
 ```
 
 ### Reward Modeling using sycophancy biased dataset
 ```bash
-CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero2.yaml --num_processes=1 --main_process_port=1231 src/reward_modeling/reward_modeling.py recipes/reward_modeling/llama3/Llama-3-8B_sycophancy.yaml
+CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero2.yaml --num_processes=1 --main_process_port=1231 src/reward_modeling/reward_modeling.py recipes/reward_modeling/Llama-3-8B_sycophancy.yaml
 ```
 
 ## Influence Computation
