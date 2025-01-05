@@ -12,7 +12,7 @@ source ~/.bashrc
 conda activate if_rlhf
 ```
 ### check gpu
-```bash
+```python
 import torch
 torch.cuda.is_available() # should show True
 ```

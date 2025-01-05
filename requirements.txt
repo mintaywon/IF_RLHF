@@ -1,0 +1,6 @@
+wandb
+jsonlines
+vllm==0.2.4
+optimum
+opacus
+datasets
