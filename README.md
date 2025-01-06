@@ -1,4 +1,9 @@
 # Understanding Impact of Human Feedback via Influence Functions
+
+<p align="center">
+  <img src="assets/intro.png" alt="Introductory Figure" width="1000">
+</p>
+
 --- 
 We provide a codebase for "[Understanding Impact of Human Feedback via Influence Functions](https://openreview.net/pdf/8434def111ebf43faba5e82e814c55a78d6c6bcd.pdf)" under review at ICLR 2025. Our work utilizes influence functions to measure the impact of human feedback on the performance of reward models. In this repository, we provide source code to replicate our work, including length/sycophancy bias detection and improving labeler strategies.
 
