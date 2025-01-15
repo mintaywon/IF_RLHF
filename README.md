@@ -5,7 +5,7 @@
 </p>
 
 --- 
-We provide a codebase for "[Understanding Impact of Human Feedback via Influence Functions]". Our work utilizes influence functions to measure the impact of human feedback on the performance of reward models. In this repository, we provide source code to replicate our work, including length/sycophancy bias detection and improving labeler strategies.
+We provide a codebase for "[Understanding Impact of Human Feedback via Influence Functions](https://arxiv.org/abs/2501.05790)". Our work utilizes influence functions to measure the impact of human feedback on the performance of reward models. In this repository, we provide source code to replicate our work, including length/sycophancy bias detection and improving labeler strategies.
 
 ## Install
 ---
