@@ -1,6 +1,6 @@
 wandb
 jsonlines
-vllm==0.2.4
+vllm
 optimum
 opacus
 datasets

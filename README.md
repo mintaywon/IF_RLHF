@@ -12,9 +12,11 @@ We provide a codebase for "[Understanding Impact of Human Feedback via Influence
 ### create conda environment
 ```bash
 conda create -n if_rlhf python=3.10 absl-py pyparsing pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-echo "export IF_RLHF_HOME=/path/to/current/directory" >> ~/.bashrc
-source ~/.bashrc
 conda activate if_rlhf
+conda env config vars set IF_RLHF_HOME=/path/to/current/directory
+conda env config vars set WANDB_PROJECT=IF_RLHF # for wandb logging
+conda deactivate && conda activate if_rlhf
+cd $IF_RLHF_HOME # check home directory
 ```
 ### check gpu
 ```python
@@ -33,6 +35,11 @@ MAX_JOBS=4 pip install flash-attn --no-build-isolation
 ### for deepspeed
 ```bash
 conda install -c conda-forge mpi4py mpich
+```
+### Login to huggingface, wandb
+```bash
+huggingface-cli login
+wandb login
 ```
 
 ## Datasets
@@ -56,7 +63,7 @@ CUDA_VISIBLE_DEVICES=0 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file
 ```
 
 ## Influence Computation
-### Cache Gradients
+### Cache Gradients (for efficient storage of gradients)
 - Length bias
 ```bash
 CUDA_VISIBLE_DEVICES=0 python src/influence/cache_gradients.py \

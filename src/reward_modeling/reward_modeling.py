@@ -99,7 +99,6 @@ if __name__ == "__main__":
     # Training
     ################
     
-    accelerator = Accelerator()
     trainer = RewardTrainer(
         model=model,
         tokenizer=tokenizer,
@@ -111,4 +110,3 @@ if __name__ == "__main__":
     )
     trainer.train()
     trainer.save_model(reward_config.output_dir)
-    accelerator.wait_for_everyone()

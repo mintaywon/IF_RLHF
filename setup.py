@@ -60,6 +60,7 @@ _deps = [
     "peft>=0.9.0",
     "protobuf<=3.20.2",  # Needed to avoid conflicts with `transformers`
     "pytest",
+    "pydantic>=2.0.0",
     "safetensors>=0.3.3",
     "sentencepiece>=0.1.99",
     "scipy",
